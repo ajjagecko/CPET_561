@@ -1,0 +1,46 @@
+# ---------------------------------------------------------------
+# Assembly language program that reads data from the switches
+# and displays it on the LEDs.
+# ---------------------------------------------------------------
+
+.text
+
+# define a macro to move a 32 bit address to a register
+
+.macro MOVIA reg, addr
+  movhi \reg, %hi(\addr)
+  ori \reg, \reg, %lo(\addr)
+.endm
+
+# define constants
+.equ Switches, 0x11020    #find the base address of Switches in the system.h file
+.equ HEXs,     0x11000    #find the base address of HEX in the system.h file
+.equ Buttons,  0x11010    #find the base address of Buttons in the system.h file
+0x0001
+hex_start:
+ .word hex_val 0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02, 0x78, 0x00, 0x18, 0x27
+hex_end:
+
+#Define the main program
+.global main
+main: 	#load r2 and r3 with the addresses
+  #Assigning registers to addresses
+  movia r2, Switches
+  movia r3, Buttons
+  movia r4, HEXs
+  movia r5, hex_val
+
+  ldw r6, 0(r5)
+
+loop:
+  stbio r6, 0(r4)        #putting value onto HEX display
+  ldbio r7, 0(r3)        #loading buttons
+  andi  r7, r7, 0x0002   #bit masking buttons
+  bne r7, r0, UPDATE
+  br    loop
+
+UPDATE:     #Handles updating HEX value
+ ldi r7, 0(r2)
+ addi r5, r0,
+
+
