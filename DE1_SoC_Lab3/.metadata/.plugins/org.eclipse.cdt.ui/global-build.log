@@ -1,33 +1,30 @@
-11:28:21 **** Incremental Build of configuration Nios II for project nios_software ****
+15:25:21 **** Incremental Build of configuration Nios II for project nios_software ****
 make all 
 Info: Building ../nios_software_bsp/
 C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_software_bsp/
 [BSP build complete]
-Info: Compiling prelab_main.c to obj/default/prelab_main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../nios_software_bsp//HAL/inc -I../nios_software_bsp/ -I../nios_software_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/prelab_main.o prelab_main.c
-prelab_main.c: In function 'main':
-prelab_main.c:10:96: warning: excess elements in array initializer
-    unsigned char hex_values[10] = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02, 0x78, 0x00, 0x18, 0x27};
-                                                                                                ^
-prelab_main.c:10:96: note: (near initialization for 'hex_values')
-prelab_main.c:8:19: warning: unused variable 'ledsBase_ptr' [-Wunused-variable]
-    unsigned char *ledsBase_ptr     = (unsigned char *) LEDS_BASE;
-                   ^
+Info: Compiling part2_main.c to obj/default/part2_main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_software_bsp//HAL/inc -I../nios_software_bsp/ -I../nios_software_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/part2_main.o part2_main.c
+part2_main.c: In function 'main':
+part2_main.c:53:94: warning: excess elements in array initializer
+  unsigned char hex_values[10] = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02, 0x78, 0x00, 0x18, 0x27};
+                                                                                              ^
+part2_main.c:53:94: note: (near initialization for 'hex_values')
 Info: Linking nios_software.elf
-nios2-elf-g++  -T'../nios_software_bsp//linker.x' -msys-crt0='../nios_software_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_software_bsp/   -Wl,-Map=nios_software.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_software.elf obj/default/prelab_main.o -lm -msys-lib=m
+nios2-elf-g++  -T'../nios_software_bsp//linker.x' -msys-crt0='../nios_software_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_software_bsp/   -Wl,-Map=nios_software.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_software.elf obj/default/part2_main.o -lm -msys-lib=m
 nios2-elf-insert nios_software.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 17 --sidp 0x11060 --timestamp 1738891464 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system --quartus_project_dir "S:/CPET561/CPET_561/DE1_SoC_Lab3" --jdi ../..//output_files/DE1_SoC_Lab3.jdi --sopcinfo S:/CPET561/CPET_561/DE1_SoC_Lab3/software/nios_software_bsp/../../nios_system.sopcinfo
 Info: (nios_software.elf) 15 KBytes program size (code + initialized data).
 Info:                     10 KBytes free for stack + heap.
 Info: Creating nios_software.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source nios_software.elf >nios_software.objdump
 [nios_software build complete]
-11:28:30 **** Build of configuration Nios II for project nios_software ****
+15:26:00 **** Build of configuration Nios II for project nios_software ****
 make all 
 Info: Building ../nios_software_bsp/
 C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_software_bsp/
 [BSP build complete]
 [nios_software build complete]
-11:28:33 **** Incremental Build of configuration Nios II for project nios_software ****
+15:26:02 **** Incremental Build of configuration Nios II for project nios_software ****
 make all 
 Info: Building ../nios_software_bsp/
 C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_software_bsp/
