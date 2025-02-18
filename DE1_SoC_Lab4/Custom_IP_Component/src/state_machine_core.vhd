@@ -17,8 +17,7 @@ entity state_machine_core is
       write_en_i    :in std_logic;
       angle_flag_i  :in std_logic;
       state_pres_o  :out std_logic_vector(3 downto 0);
-      state_next_o  :out std_logic_vector(3 downto 0);
-      irq_o         :out std_logic
+      state_next_o  :out std_logic_vector(3 downto 0)
    );
 end entity state_machine_core;
 
@@ -37,7 +36,7 @@ begin
       begin
          state_pres_s <= state_pres_s;            --Avoiding latch
          if(reset = '1') then
-            state_pres_s <= "1000";        
+            state_pres_s <= SWEEP_RIGHT_STATE;        
          elsif(clk'event and clk = '1') then
             state_pres_s <= state_next_s;
          end if;
@@ -58,10 +57,8 @@ begin
                --led_o <= "0100";
                if ('1' = write_en_i) then
                   state_next_s <= SWEEP_LEFT_STATE;
-                  irq_o <= '0';
                else
                   state_next_s <= state_pres_s;
-                  irq_o <= '1';
                end if;
             when SWEEP_LEFT_STATE =>
                --led_o <= "0010";
@@ -74,10 +71,8 @@ begin
                --led_o <= "0001";
                if ('1' = write_en_i) then
                   state_next_s <= SWEEP_RIGHT_STATE;
-                  irq_o <= '0';
                else
                   state_next_s <= state_pres_s;
-                  irq_o <= '1';
                end if;
             when others =>
                state_next_s <= state_pres_s; --NEXT TIME: MOVE THIS OUT OF when others AND ADD IT ABOVE CASE STATEMENT TO AVOID LATCHES!!!!!

@@ -20,9 +20,9 @@ architecture beh of generic_counter is
 signal cntr   :std_logic_vector(31 downto 0) := x"00000000";
 
 begin
-   gen_counter:process (clk) begin
-      if (rising_edge(clk)) then
-         if (reset_i = '0') then
+    gen_counter:process (clk) begin
+	   if (clk'event and clk = '1') then
+         if (reset_i = '1') then
             cntr <= x"00000000";
             output <= '0';
          elsif (max_count = cntr) then

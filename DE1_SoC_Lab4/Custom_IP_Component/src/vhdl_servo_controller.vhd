@@ -26,18 +26,18 @@ end entity vhdl_servo_controller;
 
 architecture beh of vhdl_servo_controller is
 
-constant ANGLE_MAX_RESET :std_logic_vector(31 downto 0) := x"00000064";--"000186A0";
-constant ANGLE_MIN_RESET :std_logic_vector(31 downto 0) := x"00000032";--"0000C350";
+constant SWEEP_RIGHT_STATE :std_logic_vector(3 downto 0) := "1000";
+constant INT_RIGHT_STATE   :std_logic_vector(3 downto 0) := "0100";
+constant SWEEP_LEFT_STATE  :std_logic_vector(3 downto 0) := "0010";
+constant INT_LEFT_STATE    :std_logic_vector(3 downto 0) := "0001";
+
+constant ANGLE_MAX_RESET :std_logic_vector(31 downto 0) := x"000186A0";  --"00000014";--
+constant ANGLE_MIN_RESET :std_logic_vector(31 downto 0) := x"0000C350";  --"00000000";--
 
 signal state_next_s, state_pres_s :std_logic_vector(3 downto 0);
 
-signal write_en_max_s    :std_logic := '0';
-signal write_en_min_s    :std_logic := '0';
-signal write_data_max_s  :std_logic_vector(31 downto 0);
-signal write_data_min_s  :std_logic_vector(31 downto 0);
-
-signal angle_max_reg_s  :std_logic_vector(31 downto 0);
-signal angle_min_reg_s  :std_logic_vector(31 downto 0);
+signal angle_max_reg_s  :std_logic_vector(31 downto 0); --:= ANGLE_MAX_RESET;
+signal angle_min_reg_s  :std_logic_vector(31 downto 0); --:= ANGLE_MIN_RESET;
 
 signal angle_max_in_s  :std_logic_vector(31 downto 0);
 signal angle_min_in_s  :std_logic_vector(31 downto 0);
@@ -46,7 +46,8 @@ signal period_count_s  :std_logic_vector(31 downto 0) := x"00000000";
 signal angle_s  :std_logic_vector(31 downto 0) := x"00000000";
 signal period_flag_s   :std_logic := '0';
 signal angle_flag_s    :std_logic := '0';
-signal pwm_s           :std_logic;
+signal pwm_s           :std_logic := '0';
+signal irq_s           :std_logic := '0'; 
 
 component angle_counter is
    port (
@@ -80,61 +81,36 @@ component state_machine_core is
       write_en_i    :in std_logic;
       angle_flag_i  :in std_logic;
       state_pres_o  :out std_logic_vector(3 downto 0);
-      state_next_o  :out std_logic_vector(3 downto 0);
-      irq_o         :out std_logic
+      state_next_o  :out std_logic_vector(3 downto 0)
    );
 end component;
 
 begin
 
-   addr_mux: process(addr_i, write_data_i, write_en_i)
+   addr_mux: process(clk, reset_i, addr_i, write_data_i, write_en_i, state_pres_s)
       begin
-	     case addr_i is
-		   when '0' =>
-            write_data_min_s <= write_data_i;
-            write_en_min_s   <= write_en_i;
-            write_data_max_s <= write_data_max_s;
-            write_en_max_s   <= write_en_max_s;
-		   when '1' =>
-            write_data_max_s <= write_data_i;
-            write_en_max_s   <= write_en_i;
-            write_data_min_s <= write_data_min_s;
-            write_en_min_s   <= write_en_min_s;  
-		   when others =>
-		      write_data_max_s <= write_data_max_s;
-            write_en_max_s   <= write_en_max_s;
-		      write_data_min_s <= write_data_min_s;
-            write_en_min_s   <= write_en_min_s;
-         end case;
+         if(clk'event and clk = '1') then
+            if (reset_i = '1') then
+               angle_min_reg_s <= ANGLE_MIN_RESET;
+               angle_max_reg_s <= ANGLE_MAX_RESET;
+            elsif (state_pres_s = INT_LEFT_STATE or state_pres_s = INT_RIGHT_STATE) then
+               if (write_en_i = '1') then
+                  case addr_i is
+                     when '0' =>
+                        angle_min_reg_s <= write_data_i;
+                     when '1' =>
+                        angle_max_reg_s <= write_data_i;
+                     when others =>
+                        angle_min_reg_s <= angle_min_reg_s;
+                        angle_max_reg_s <= angle_max_reg_s;
+                  end case;
+               end if;
+            else
+               angle_max_reg_s <= angle_max_reg_s;
+               angle_min_reg_s <= angle_min_reg_s;
+            end if;
+         end if;
       end process;
-
-   min_reg: process(clk, write_en_min_s, write_data_min_s, angle_min_reg_s)
-      begin
-         if (reset_i = '1') then
-            angle_min_reg_s <= ANGLE_MIN_RESET;
-         elsif (clk'event and clk = '1') then
-            if write_en_min_s = '1' then
-               angle_min_reg_s <= write_data_min_s;
-               write_en_min_s <= '0';
-			else
-			   angle_min_reg_s <= angle_min_reg_s;
-			end if;
-		 end if;
-	  end process;
-	  
-   max_reg: process(clk, write_en_max_s, write_data_max_s, angle_max_reg_s)
-      begin
-         if (reset_i = '1') then
-		    angle_max_reg_s <= ANGLE_MAX_RESET;
-		 elsif (clk'event and clk = '1') then
-		    if write_en_max_s = '1' then
-			   angle_max_reg_s <= write_data_max_s;
-			   write_en_max_s <= '0';
-			else
-			   angle_max_reg_s <= angle_max_reg_s;
-			end if;
-		 end if;
-	  end process;
 	  
 
    angle_proc: angle_counter
@@ -151,7 +127,7 @@ begin
 	  
    counter: generic_counter
       generic map (
-	     max_count => x"000003E8"--"000F4240";
+	     max_count => x"000F4240";  --"00000034"--
 	  )
 	  port map (
          clk      => clk,
@@ -168,9 +144,30 @@ begin
          write_en_i   => write_en_i,
          angle_flag_i => angle_flag_s,
          state_pres_o => state_pres_s,
-         state_next_o => state_next_s,
-         irq_o        => irq_o
+         state_next_o => state_next_s
       );
+      
+   irq_gen: process(clk, state_pres_s)
+      begin
+         if(clk'event and clk = '1') then 
+            case state_pres_s is
+               when SWEEP_RIGHT_STATE =>
+                  irq_s <= '0';
+               when INT_RIGHT_STATE =>
+                  irq_s <= '1';
+               when SWEEP_LEFT_STATE => 
+                  irq_s <= '0';
+               when INT_LEFT_STATE =>
+                  irq_s <= '1';
+               when others =>
+                  irq_s <= irq_s;
+            end case;
+         else 
+            irq_s <= irq_s;
+         end if;
+      end process;
+      
+      irq_o <= irq_s;
 	  
    compare_process: process(clk, angle_s, period_count_s)
       begin

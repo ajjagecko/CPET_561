@@ -23,11 +23,16 @@ quietly WaveActivateNextPane {} 0
 add wave -noupdate /vhdl_servo_controller_tb/dut/clk         
 add wave -noupdate /vhdl_servo_controller_tb/dut/reset_i     
 add wave -noupdate /vhdl_servo_controller_tb/dut/addr_i      
-add wave -noupdate /vhdl_servo_controller_tb/dut/write_data_i
 add wave -noupdate /vhdl_servo_controller_tb/dut/write_en_i
+add wave -noupdate /vhdl_servo_controller_tb/dut/write_data_i
+add wave -noupdate /vhdl_servo_controller_tb/dut/angle_max_reg_s
+add wave -noupdate /vhdl_servo_controller_tb/dut/angle_min_reg_s  
 add wave -noupdate /vhdl_servo_controller_tb/dut/state_pres_s
 add wave -noupdate /vhdl_servo_controller_tb/dut/angle_s  
-add wave -noupdate /vhdl_servo_controller_tb/dut/pwm_o       
+add wave -noupdate /vhdl_servo_controller_tb/dut/pwm_o
+add wave -noupdate /vhdl_servo_controller_tb/dut/angle_flag_s
+add wave -noupdate /vhdl_servo_controller_tb/dut/period_flag_s       
+add wave -noupdate /vhdl_servo_controller_tb/dut/period_count_s
 add wave -noupdate /vhdl_servo_controller_tb/dut/irq_o
 
 

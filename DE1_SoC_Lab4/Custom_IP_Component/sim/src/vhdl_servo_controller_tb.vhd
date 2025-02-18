@@ -25,11 +25,11 @@ end component;
 
 
 constant period :time := 10ns;
-signal  clk           :std_logic;
+signal  clk           :std_logic := '0';
 signal  reset_i       :std_logic := '1';
-signal  addr_i        :std_logic;
-signal  write_data_i  :std_logic_vector(31 downto 0);
-signal  write_en_i    :std_logic;
+signal  addr_i        :std_logic := '0';
+signal  write_data_i  :std_logic_vector(31 downto 0) := x"00000000";
+signal  write_en_i    :std_logic := '0';
 signal  pwm_o         :std_logic;
 signal  irq_o         :std_logic;
 
@@ -38,11 +38,40 @@ begin
 sequential_tb : process 
     begin
       report "****************** sequential testbench start ****************";
-      -- Reset
-      wait for 80ns;
+      -- Reset + first full cycle
+      wait until irq_o = '1';
+      wait for 1ns;
+      addr_i <= '1';
+      write_data_i <= x"0000000A";
+      write_en_i <= '1';
+      wait for period;
+      write_en_i <= '0';
       
-      -- Addition 1
-            
+      wait until irq_o = '1';
+      wait for 1ns;
+      addr_i <= '0';
+      write_data_i <= x"00000005";
+      write_en_i <= '1';
+      wait for period;
+      write_en_i <= '0';
+      
+      wait until irq_o = '1';
+      wait for 1ns;
+      addr_i <= '0';
+      write_data_i <= x"00000007";
+      write_en_i <= '1';
+      wait for period;
+      write_en_i <= '0';
+      
+      wait until irq_o = '1';
+      wait for 1ns;
+      addr_i <= '1';
+      write_data_i <= x"00000010";
+      write_en_i <= '1';
+      wait for period;
+      write_en_i <= '0';
+
+      
       report "****************** sequential testbench stop ****************";
       wait;
   end process; 

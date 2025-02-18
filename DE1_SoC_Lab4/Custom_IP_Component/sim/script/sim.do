@@ -7,4 +7,4 @@ vcom -93 -work work ../src/vhdl_servo_controller_tb.vhd
 
 vsim -voptargs=+acc -msgmode both vhdl_servo_controller_tb
 do wave.do
-run 3000 ns
+run 50000 ns
