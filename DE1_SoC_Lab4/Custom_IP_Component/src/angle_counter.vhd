@@ -12,7 +12,7 @@ entity angle_counter is
 	  angle_min_i        :in  std_logic_vector(31 downto 0);
 	  state_pres_i       :in  std_logic_vector(3 downto 0);
 	  angle_o            :out std_logic_vector(31 downto 0);
-     angle_matched_flag :out std_logic;
+     angle_matched_flag :out std_logic
    );
 end angle_counter;
 
@@ -39,8 +39,8 @@ begin
       begin
          case state_pres_i is 
             when SWEEP_RIGHT_STATE =>
-               if (angle_max_i == angle_s) then
-                  angle_matched_flag = '1';
+               if (angle_max_i = angle_s) then
+                  angle_matched_flag <= '1';
                   angle_s <= angle_max_i;
                elsif period_flag_i = '1' then
                   angle_s <= angle_s + x"00000001";
@@ -48,8 +48,8 @@ begin
                   angle_s <= angle_s;
                end if;
             when SWEEP_LEFT_STATE => 
-               if (angle_min_i == angle_s) then
-                  angle_matched_flag = '1';
+               if (angle_min_i = angle_s) then
+                  angle_matched_flag <= '1';
                   angle_s <= angle_min_i;
                elsif period_flag_i = '1' then
                   angle_s <= angle_s - x"00000001";
@@ -57,14 +57,15 @@ begin
                   angle_s <= angle_s;
                end if;
             when INT_RIGHT_STATE => 
-               angle_matched_flag = '0';
+               angle_matched_flag <= '0';
                angle_s <= angle_max_i;
             when INT_LEFT_STATE => 
-               angle_matched_flag = '0';
+               angle_matched_flag <= '0';
                angle_s <= angle_min_i;
             when others =>
                angle_s <= angle_s;
          end case;
+      end process;
    
       angle_o <= angle_s;
 end beh;

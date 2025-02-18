@@ -1,0 +1,1419 @@
+# //  ModelSim SE-64 2019.2 Apr 17 2019
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do sim.do
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 11:53:03 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# ** Error: (vcom-7) Failed to open design unit file "../../src/state_machine_core.vhd" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 11:53:03 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 2
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/state_machine_core.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 11:53:48 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity state_machine_core
+# ** Error: ../../src/state_machine_core.vhd(11): (vcom-1136) Unknown identifier "std_logic".
+# ** Error: ../../src/state_machine_core.vhd(12): (vcom-1136) Unknown identifier "std_logic".
+# ** Error: ../../src/state_machine_core.vhd(13): (vcom-1136) Unknown identifier "std_logic".
+# ** Error: ../../src/state_machine_core.vhd(14): (vcom-1136) Unknown identifier "std_logic".
+# ** Error: ../../src/state_machine_core.vhd(15): (vcom-1136) Unknown identifier "std_logic_vector".
+# ** Error: ../../src/state_machine_core.vhd(16): (vcom-1136) Unknown identifier "std_logic_vector".
+# ** Error: ../../src/state_machine_core.vhd(17): (vcom-1136) Unknown identifier "std_logic".
+# ** Note: ../../src/state_machine_core.vhd(19): VHDL Compiler exiting
+# End time: 11:53:48 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 7, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 2
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/state_machine_core.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 11:55:17 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of generic_state_machine_core
+# ** Error: (vcom-11) Could not find work.generic_state_machine_core.
+# ** Note: ../../src/state_machine_core.vhd(25): VHDL Compiler exiting
+# End time: 11:55:17 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 2
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/state_machine_core.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 11:55:39 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# ** Error: ../../src/state_machine_core.vhd(32): (vcom-1136) Unknown identifier "states".
+# ** Error: ../../src/state_machine_core.vhd(32): (vcom-1591) Bad expression in left bound of range expression.
+# ** Error: ../../src/state_machine_core.vhd(32): Type error in range expression.
+# ** Error: ../../src/state_machine_core.vhd(38): Illegal target for signal assignment.
+# ** Error: ../../src/state_machine_core.vhd(38): (vcom-1136) Unknown identifier "state_pres".
+# ** Error: ../../src/state_machine_core.vhd(40): Integer literal 1000 is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error (suppressible): ../../src/state_machine_core.vhd(48): (vcom-1014) Array type case expression must be of a locally static subtype.
+# ** Error: ../../src/state_machine_core.vhd(52): near "=": syntax error
+# End time: 11:55:39 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 8, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 2
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/state_machine_core.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 11:56:01 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# ** Error: ../../src/state_machine_core.vhd(38): Illegal target for signal assignment.
+# ** Error: ../../src/state_machine_core.vhd(38): (vcom-1136) Unknown identifier "state_pres".
+# ** Error: ../../src/state_machine_core.vhd(40): Integer literal 1000 is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../../src/state_machine_core.vhd(52): near "=": syntax error
+# End time: 11:56:01 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 2
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/state_machine_core.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 11:56:29 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# ** Error: ../../src/state_machine_core.vhd(40): Integer literal 1000 is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../../src/state_machine_core.vhd(52): near "=": syntax error
+# End time: 11:56:29 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 2
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/state_machine_core.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 11:56:44 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# ** Error: ../../src/state_machine_core.vhd(52): near "=": syntax error
+# End time: 11:56:44 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 2
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/state_machine_core.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 11:58:13 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# ** Error: ../../src/state_machine_core.vhd(56): near "when": (vcom-1576) expecting END.
+# ** Error: ../../src/state_machine_core.vhd(61): near "else": (vcom-1576) expecting END or WHEN.
+# ** Error: ../../src/state_machine_core.vhd(64): near "when": (vcom-1576) expecting END.
+# End time: 11:58:13 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 2
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/state_machine_core.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 11:58:57 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 11:58:57 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 11:58:57 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# ** Error: ../../src/generic_counter.vhd(8): Integer literal 3 is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Note: ../../src/generic_counter.vhd(16): VHDL Compiler exiting
+# End time: 11:58:57 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 3
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/generic_counter.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 11:59:30 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 11:59:30 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 11:59:30 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# ** Error: ../../src/generic_counter.vhd(23): (vcom-1136) Unknown identifier "CLOCK_50".
+# ** Error: ../../src/generic_counter.vhd(23): Expression is not a signal.
+# ** Error: ../../src/generic_counter.vhd(24): (vcom-1136) Unknown identifier "CLOCK_50".
+# ** Error: ../../src/generic_counter.vhd(27): Enumeration literal '0' is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../../src/generic_counter.vhd(28): near "=": syntax error
+# ** Error: ../../src/generic_counter.vhd(30): Enumeration literal '1' is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../../src/generic_counter.vhd(33): Enumeration literal '0' is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../../src/generic_counter.vhd(35): near "if": (vcom-1576) expecting PROCESS.
+# End time: 11:59:31 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 8, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 3
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/generic_counter.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:00:09 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:00:09 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:00:09 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# ** Error: ../../src/generic_counter.vhd(27): Enumeration literal '0' is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../../src/generic_counter.vhd(28): near "=": syntax error
+# ** Error: ../../src/generic_counter.vhd(30): Enumeration literal '1' is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../../src/generic_counter.vhd(33): Enumeration literal '0' is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../../src/generic_counter.vhd(35): near "if": (vcom-1576) expecting PROCESS.
+# End time: 12:00:09 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 3
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/generic_counter.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:00:46 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:00:46 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:00:46 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# ** Error: ../../src/generic_counter.vhd(27): Enumeration literal '0' is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../../src/generic_counter.vhd(30): Enumeration literal '1' is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../../src/generic_counter.vhd(33): Enumeration literal '0' is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../../src/generic_counter.vhd(36): Statement is not explicitly labeled.
+# ** Note: ../../src/generic_counter.vhd(38): VHDL Compiler exiting
+# End time: 12:00:47 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 4, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 3
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/generic_counter.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:01:04 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:01:04 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:01:05 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# ** Error: ../../src/generic_counter.vhd(36): Statement is not explicitly labeled.
+# ** Note: ../../src/generic_counter.vhd(38): VHDL Compiler exiting
+# End time: 12:01:05 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 3
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/generic_counter.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:01:31 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:01:31 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:01:31 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# End time: 12:01:32 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:01:32 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/angle_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity angle_counter
+# ** Error: ../../src/angle_counter.vhd(16): near ")": (vcom-1576) expecting IDENTIFIER.
+# End time: 12:01:32 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 4
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/angle_counter.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:01:46 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:01:47 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:01:47 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# End time: 12:01:47 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:01:47 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/angle_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity angle_counter
+# -- Compiling architecture beh of angle_counter
+# ** Error: ../../src/angle_counter.vhd(43): near "=": (vcom-1576) expecting == or '+' or '-' or '&'.
+# ** Error: ../../src/angle_counter.vhd(52): near "=": (vcom-1576) expecting == or '+' or '-' or '&'.
+# ** Error: ../../src/angle_counter.vhd(60): near "=": (vcom-1576) expecting == or '+' or '-' or '&'.
+# ** Error: ../../src/angle_counter.vhd(63): near "=": (vcom-1576) expecting == or '+' or '-' or '&'.
+# ** Error: ../../src/angle_counter.vhd(70): near "beh": (vcom-1576) expecting PROCESS.
+# End time: 12:01:47 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 4
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/angle_counter.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:02:17 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:02:17 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:02:17 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# End time: 12:02:17 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:02:17 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/angle_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity angle_counter
+# -- Compiling architecture beh of angle_counter
+# ** Error: ../../src/angle_counter.vhd(70): near "beh": (vcom-1576) expecting PROCESS.
+# End time: 12:02:17 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 4
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/angle_counter.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:02:35 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:02:35 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:02:35 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# End time: 12:02:36 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:02:36 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/angle_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity angle_counter
+# -- Compiling architecture beh of angle_counter
+# End time: 12:02:36 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:02:36 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/vhdl_servo_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl_servo_controller
+# -- Compiling architecture beh of vhdl_servo_controller
+# ** Error: ../../src/vhdl_servo_controller.vhd(30): near "constant": (vcom-1576) expecting ';'.
+# ** Error: ../../src/vhdl_servo_controller.vhd(59): near ")": (vcom-1576) expecting IDENTIFIER.
+# End time: 12:02:36 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 5
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/vhdl_servo_controller.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:03:01 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:03:02 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:03:02 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# End time: 12:03:02 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:03:02 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/angle_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity angle_counter
+# -- Compiling architecture beh of angle_counter
+# End time: 12:03:03 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:03:03 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/vhdl_servo_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl_servo_controller
+# -- Compiling architecture beh of vhdl_servo_controller
+# ** Error: ../../src/vhdl_servo_controller.vhd(59): near ")": (vcom-1576) expecting IDENTIFIER.
+# End time: 12:03:03 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 5
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/vhdl_servo_controller.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:03:13 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:03:13 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:03:13 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# End time: 12:03:14 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:03:14 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/angle_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity angle_counter
+# -- Compiling architecture beh of angle_counter
+# End time: 12:03:14 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:03:14 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/vhdl_servo_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl_servo_controller
+# -- Compiling architecture beh of vhdl_servo_controller
+# ** Error: ../../src/vhdl_servo_controller.vhd(65): near ")": (vcom-1576) expecting FUNCTION or PROCEDURE or IMPURE or PURE.
+# End time: 12:03:14 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 5
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/vhdl_servo_controller.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:03:28 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:03:29 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:03:29 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# End time: 12:03:29 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:03:29 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/angle_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity angle_counter
+# -- Compiling architecture beh of angle_counter
+# End time: 12:03:29 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:03:29 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/vhdl_servo_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl_servo_controller
+# -- Compiling architecture beh of vhdl_servo_controller
+# ** Error: ../../src/vhdl_servo_controller.vhd(138): Symbol "angle_counter" has already been declared in this region.
+# ** Error (suppressible): ../../src/vhdl_servo_controller.vhd(138): (vcom-1141) Identifier "angle_counter" does not identify a component declaration.
+# ** Error: ../../src/vhdl_servo_controller.vhd(150): Symbol "generic_counter" has already been declared in this region.
+# ** Error: ../../src/vhdl_servo_controller.vhd(152): near ";": (vcom-1576) expecting ',' or ')'.
+# ** Error: ../../src/vhdl_servo_controller.vhd(162): Statement cannot be labeled.
+# ** Error: ../../src/vhdl_servo_controller.vhd(173): (vcom-1136) Unknown identifier "angle_s".
+# ** Error: ../../src/vhdl_servo_controller.vhd(173): Expression is not a signal.
+# ** Error: ../../src/vhdl_servo_controller.vhd(174): near "if": syntax error
+# End time: 12:03:30 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 8, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 5
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/vhdl_servo_controller.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:04:06 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:04:06 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:04:07 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# End time: 12:04:07 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:04:07 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/angle_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity angle_counter
+# -- Compiling architecture beh of angle_counter
+# End time: 12:04:07 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:04:07 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/vhdl_servo_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl_servo_controller
+# -- Compiling architecture beh of vhdl_servo_controller
+# ** Error: ../../src/vhdl_servo_controller.vhd(146): (vcom-1136) Unknown identifier "angle_s".
+# ** Error: ../../src/vhdl_servo_controller.vhd(157): (vcom-1484) Unknown formal identifier "count_o".
+# ** Error: ../../src/vhdl_servo_controller.vhd(173): (vcom-1136) Unknown identifier "angle_s".
+# ** Error: ../../src/vhdl_servo_controller.vhd(173): Expression is not a signal.
+# ** Error: ../../src/vhdl_servo_controller.vhd(174): near "if": syntax error
+# End time: 12:04:07 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 5
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/vhdl_servo_controller.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:04:31 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:04:31 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:04:32 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# End time: 12:04:32 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:04:32 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/angle_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity angle_counter
+# -- Compiling architecture beh of angle_counter
+# End time: 12:04:32 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:04:32 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/vhdl_servo_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl_servo_controller
+# -- Compiling architecture beh of vhdl_servo_controller
+# ** Error: ../../src/vhdl_servo_controller.vhd(158): (vcom-1484) Unknown formal identifier "count_o".
+# ** Error: ../../src/vhdl_servo_controller.vhd(175): near "if": syntax error
+# End time: 12:04:33 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 5
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/vhdl_servo_controller.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:05:29 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:05:30 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:05:30 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# End time: 12:05:30 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:05:30 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/angle_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity angle_counter
+# -- Compiling architecture beh of angle_counter
+# End time: 12:05:30 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:05:30 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/vhdl_servo_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl_servo_controller
+# -- Compiling architecture beh of vhdl_servo_controller
+# ** Error: ../../src/vhdl_servo_controller.vhd(159): Signal "period_flag_s" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../../src/vhdl_servo_controller.vhd(178): Illegal target for signal assignment.
+# ** Error: ../../src/vhdl_servo_controller.vhd(178): (vcom-1136) Unknown identifier "pwm_s".
+# ** Error: ../../src/vhdl_servo_controller.vhd(180): Illegal target for signal assignment.
+# ** Error: ../../src/vhdl_servo_controller.vhd(180): (vcom-1136) Unknown identifier "pwm_s".
+# ** Error: ../../src/vhdl_servo_controller.vhd(183): Illegal target for signal assignment.
+# ** Error: ../../src/vhdl_servo_controller.vhd(183): (vcom-1136) Unknown identifier "pwm_s".
+# ** Error: ../../src/vhdl_servo_controller.vhd(187): (vcom-1136) Unknown identifier "pwm_s".
+# ** Error (suppressible): ../../src/vhdl_servo_controller.vhd(153): (vcom-1272) Length of formal "max_count" is 32; length of actual is 28.
+# ** Note: ../../src/vhdl_servo_controller.vhd(189): VHDL Compiler exiting
+# End time: 12:05:31 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 9, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 5
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/vhdl_servo_controller.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:06:25 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:06:25 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:06:26 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# End time: 12:06:26 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:06:26 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/angle_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity angle_counter
+# -- Compiling architecture beh of angle_counter
+# End time: 12:06:26 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:06:26 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/vhdl_servo_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl_servo_controller
+# -- Compiling architecture beh of vhdl_servo_controller
+# ** Error (suppressible): ../../src/vhdl_servo_controller.vhd(154): (vcom-1272) Length of formal "max_count" is 32; length of actual is 28.
+# ** Note: ../../src/vhdl_servo_controller.vhd(190): VHDL Compiler exiting
+# End time: 12:06:27 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 5
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/vhdl_servo_controller.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:08:04 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:08:04 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:08:04 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# End time: 12:08:05 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:08:05 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/angle_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity angle_counter
+# -- Compiling architecture beh of angle_counter
+# End time: 12:08:05 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:08:05 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/vhdl_servo_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl_servo_controller
+# -- Compiling architecture beh of vhdl_servo_controller
+# End time: 12:08:05 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:08:05 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../src/vhdl_servo_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl_servo_controller_tb
+# -- Compiling architecture arch of vhdl_servo_controller_tb
+# ** Error: ../src/vhdl_servo_controller_tb.vhd(34): near "begin": (vcom-1576) expecting ';'.
+# End time: 12:08:06 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 6
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../src/vhdl_servo_controller_tb.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:08:25 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:08:26 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:08:26 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# End time: 12:08:26 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:08:26 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/angle_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity angle_counter
+# -- Compiling architecture beh of angle_counter
+# End time: 12:08:26 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:08:26 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/vhdl_servo_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl_servo_controller
+# -- Compiling architecture beh of vhdl_servo_controller
+# End time: 12:08:27 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:08:27 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../src/vhdl_servo_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl_servo_controller_tb
+# -- Compiling architecture arch of vhdl_servo_controller_tb
+# ** Warning: ../src/vhdl_servo_controller_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Error: ../src/vhdl_servo_controller_tb.vhd(52): (vcom-1136) Unknown identifier "period".
+# ** Error: ../src/vhdl_servo_controller_tb.vhd(52): Type error resolving infix expression "/" as type std.STANDARD.TIME.
+# ** Error: ../src/vhdl_servo_controller_tb.vhd(58): (vcom-1136) Unknown identifier "period".
+# ** Error: ../src/vhdl_servo_controller_tb.vhd(58): Type error resolving infix expression "*" as type std.STANDARD.TIME.
+# ** Error: ../src/vhdl_servo_controller_tb.vhd(59): Illegal target for signal assignment.
+# ** Error: ../src/vhdl_servo_controller_tb.vhd(59): (vcom-1136) Unknown identifier "reset".
+# ** Error (suppressible): ../src/vhdl_servo_controller_tb.vhd(64): (vcom-1141) Identifier "calculator_dut" does not identify a component declaration.
+# ** Note: ../src/vhdl_servo_controller_tb.vhd(75): VHDL Compiler exiting
+# End time: 12:08:27 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 7, Warnings: 1
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 6
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../src/vhdl_servo_controller_tb.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:09:04 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:09:04 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:09:04 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# End time: 12:09:04 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:09:05 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/angle_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity angle_counter
+# -- Compiling architecture beh of angle_counter
+# End time: 12:09:05 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:09:05 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/vhdl_servo_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl_servo_controller
+# -- Compiling architecture beh of vhdl_servo_controller
+# End time: 12:09:05 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:09:06 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../src/vhdl_servo_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl_servo_controller_tb
+# -- Compiling architecture arch of vhdl_servo_controller_tb
+# ** Warning: ../src/vhdl_servo_controller_tb.vhd(27): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/vhdl_servo_controller_tb.vhd(42): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Error: ../src/vhdl_servo_controller_tb.vhd(61): Illegal target for signal assignment.
+# ** Error: ../src/vhdl_servo_controller_tb.vhd(61): (vcom-1136) Unknown identifier "reset".
+# ** Error (suppressible): ../src/vhdl_servo_controller_tb.vhd(66): (vcom-1141) Identifier "calculator_dut" does not identify a component declaration.
+# ** Note: ../src/vhdl_servo_controller_tb.vhd(77): VHDL Compiler exiting
+# End time: 12:09:06 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 2
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 6
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../src/vhdl_servo_controller_tb.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:09:24 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:09:24 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:09:24 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# End time: 12:09:24 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:09:24 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/angle_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity angle_counter
+# -- Compiling architecture beh of angle_counter
+# End time: 12:09:25 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:09:25 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/vhdl_servo_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl_servo_controller
+# -- Compiling architecture beh of vhdl_servo_controller
+# End time: 12:09:25 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:09:25 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../src/vhdl_servo_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl_servo_controller_tb
+# -- Compiling architecture arch of vhdl_servo_controller_tb
+# ** Warning: ../src/vhdl_servo_controller_tb.vhd(27): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/vhdl_servo_controller_tb.vhd(42): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Error (suppressible): ../src/vhdl_servo_controller_tb.vhd(66): (vcom-1141) Identifier "calculator_dut" does not identify a component declaration.
+# ** Note: ../src/vhdl_servo_controller_tb.vhd(77): VHDL Compiler exiting
+# End time: 12:09:25 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+# ** Error: C:/Software/ModelSim/win64/vcom failed.
+# Error in macro ./sim.do line 6
+# C:/Software/ModelSim/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../src/vhdl_servo_controller_tb.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:09:40 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity state_machine_core
+# -- Compiling architecture beh of state_machine_core
+# End time: 12:09:41 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:09:41 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# End time: 12:09:41 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:09:41 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/angle_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity angle_counter
+# -- Compiling architecture beh of angle_counter
+# End time: 12:09:41 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:09:42 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../src/vhdl_servo_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl_servo_controller
+# -- Compiling architecture beh of vhdl_servo_controller
+# End time: 12:09:42 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 12:09:42 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../src/vhdl_servo_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl_servo_controller_tb
+# -- Compiling architecture arch of vhdl_servo_controller_tb
+# ** Warning: ../src/vhdl_servo_controller_tb.vhd(27): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/vhdl_servo_controller_tb.vhd(42): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 12:09:42 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" -msgmode both vhdl_servo_controller_tb 
+# Start time: 12:09:43 on Feb 18,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "state_machine_core(beh)".
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.vhdl_servo_controller_tb(arch)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.vhdl_servo_controller(beh)#1
+# Loading work.angle_counter(beh)#1
+# Loading work.generic_counter(beh)#1
+# Loading work.state_machine_core(beh)#1
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vish-4014) No objects found matching '/vhdl_servo_controller_tb/dut/reset'.
+# Executing ONERROR command at macro ./wave.do line 23
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ns  Iteration: 0  Instance: /vhdl_servo_controller_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 2  Instance: /vhdl_servo_controller_tb/dut/angle_proc
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 80 ns  Iteration: 0  Instance: /vhdl_servo_controller_tb
+# End time: 12:09:59 on Feb 18,2025, Elapsed time: 0:00:16
+# Errors: 5, Warnings: 1
