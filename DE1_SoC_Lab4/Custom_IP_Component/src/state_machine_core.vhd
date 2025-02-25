@@ -35,7 +35,7 @@ begin
    state_reset:process(clk,reset) is
       begin
          state_pres_s <= state_pres_s;            --Avoiding latch
-         if(reset = '1') then
+         if(reset = '0') then
             state_pres_s <= SWEEP_RIGHT_STATE;        
          elsif(clk'event and clk = '1') then
             state_pres_s <= state_next_s;

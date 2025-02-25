@@ -16,9 +16,9 @@ entity vhdl_servo_controller is
    port (
      clk           :in  std_logic;
 	  reset_i       :in  std_logic;
-	  addr_i        :in  std_logic;
+	  --addr_i        :in  std_logic;
 	  write_data_i  :in  std_logic_vector(31 downto 0);
-	  write_en_i    :in  std_logic;
+	  --write_en_i    :in  std_logic;
 	  pwm_o         :out std_logic;
 	  irq_o         :out std_logic
 	);
@@ -48,6 +48,11 @@ signal period_flag_s   :std_logic := '0';
 signal angle_flag_s    :std_logic := '0';
 signal pwm_s           :std_logic := '0';
 signal irq_s           :std_logic := '0'; 
+
+--TEMP FOR BOARD DEMO
+signal addr_i        :std_logic := '0';
+signal write_en_i    :std_logic := '1';
+--TEMP FOR BOARD DEMO
 
 component angle_counter is
    port (
@@ -85,20 +90,21 @@ component state_machine_core is
    );
 end component;
 
+
 begin
 
    addr_mux: process(clk, reset_i, addr_i, write_data_i, write_en_i, state_pres_s)
       begin
          if(clk'event and clk = '1') then
-            if (reset_i = '1') then
+            if (reset_i = '0') then
                angle_min_reg_s <= ANGLE_MIN_RESET;
                angle_max_reg_s <= ANGLE_MAX_RESET;
             elsif (state_pres_s = INT_LEFT_STATE or state_pres_s = INT_RIGHT_STATE) then
                if (write_en_i = '1') then
                   case addr_i is
                      when '0' =>
-                        angle_min_reg_s <= write_data_i;
-                     when '1' =>
+                        angle_min_reg_s <= x"0000F050";--write_data_i;
+                     when '1' => 
                         angle_max_reg_s <= write_data_i;
                      when others =>
                         angle_min_reg_s <= angle_min_reg_s;
@@ -127,7 +133,7 @@ begin
 	  
    counter: generic_counter
       generic map (
-	     max_count => x"000F4240";  --"00000034"--
+	     max_count => x"000F4240"  --"00000034"
 	  )
 	  port map (
          clk      => clk,

@@ -30,7 +30,7 @@ begin
 
    angle_check: process(clk, reset_i, state_pres_i, period_flag_i, angle_s, angle_min_i, angle_max_i)
       begin
-         if (reset_i = '1') then
+         if (reset_i = '0') then
             angle_s <= angle_min_i;
          elsif (clk'event and clk = '1') then
             case state_pres_i is 

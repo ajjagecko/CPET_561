@@ -22,49 +22,11 @@ set_global_assignment -name VHDL_FILE ../../src/angle_counter.vhd
 set_global_assignment -name VHDL_FILE ../../src/vhdl_servo_controller.vhd
 
 set_location_assignment PIN_AF14 -to clk
-set_location_assignment PIN_AA14 -to reset
+set_location_assignment PIN_AA14 -to reset_i
 
-set_location_assignment PIN_V16  -to led_o[0]
-set_location_assignment PIN_W16  -to led_o[1]
-set_location_assignment PIN_V17  -to led_o[2]
-set_location_assignment PIN_V18  -to led_o[3]
-set_location_assignment PIN_W17  -to led_o[3]
+set_location_assignment PIN_AC22 -to pwm_o
 
-set_location_assignment PIN_AB12 -to switch_i[0]
-set_location_assignment PIN_AC12 -to switch_i[1]
-set_location_assignment PIN_AF9  -to switch_i[2]
-set_location_assignment PIN_AF10 -to switch_i[3]
-set_location_assignment PIN_AD11 -to switch_i[4]
-set_location_assignment PIN_AD12 -to switch_i[5]
-set_location_assignment PIN_AE11 -to switch_i[6]
-set_location_assignment PIN_AC9  -to switch_i[7]
-
-set_location_assignment PIN_AD10 -to op_sel_i[0]
-set_location_assignment PIN_AE12 -to op_sel_i[1]
-
-set_location_assignment PIN_AE26 -to bcd_one_o[0]
-set_location_assignment PIN_AE27 -to bcd_one_o[1]
-set_location_assignment PIN_AE28 -to bcd_one_o[2]
-set_location_assignment PIN_AG27 -to bcd_one_o[3]
-set_location_assignment PIN_AF28 -to bcd_one_o[4]
-set_location_assignment PIN_AG28 -to bcd_one_o[5]
-set_location_assignment PIN_AH28 -to bcd_one_o[6]
-
-set_location_assignment PIN_AJ29 -to bcd_ten_o[0]
-set_location_assignment PIN_AH29 -to bcd_ten_o[1]
-set_location_assignment PIN_AH30 -to bcd_ten_o[2]
-set_location_assignment PIN_AG30 -to bcd_ten_o[3]
-set_location_assignment PIN_AF29 -to bcd_ten_o[4]
-set_location_assignment PIN_AF30 -to bcd_ten_o[5]
-set_location_assignment PIN_AD27 -to bcd_ten_o[6]
-
-set_location_assignment PIN_AB23 -to bcd_hun_o[0]
-set_location_assignment PIN_AE29 -to bcd_hun_o[1]
-set_location_assignment PIN_AD29 -to bcd_hun_o[2]
-set_location_assignment PIN_AC28 -to bcd_hun_o[3]
-set_location_assignment PIN_AD30 -to bcd_hun_o[4]
-set_location_assignment PIN_AC29 -to bcd_hun_o[5]
-set_location_assignment PIN_AC30 -to bcd_hun_o[6]
+set_location_assignment PIN_V16  -to irq_o
 
 # set_location_assignment PIN_AD26 -to bcd_3[0]
 # set_location_assignment PIN_AC27 -to bcd_3[1]
