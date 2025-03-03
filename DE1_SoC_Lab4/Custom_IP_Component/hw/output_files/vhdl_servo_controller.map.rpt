@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vhdl_servo_controller
-Tue Feb 25 16:08:05 2025
+Mon Mar 03 12:39:06 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -14,14 +14,15 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: generic_counter:counter
- 13. Port Connectivity Checks: "state_machine_core:state_machine"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: generic_counter:counter
+ 14. Port Connectivity Checks: "state_machine_core:state_machine"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -47,13 +48,13 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Feb 25 16:08:05 2025           ;
+; Analysis & Synthesis Status     ; Successful - Mon Mar 03 12:39:06 2025           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; vhdl_servo_controller                           ;
 ; Top-level Entity Name           ; vhdl_servo_controller                           ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 74                                              ;
+; Total registers                 ; 71                                              ;
 ; Total pins                      ; 36                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
@@ -188,25 +189,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 135       ;
+; Estimate of Logic utilization (ALMs needed) ; 136       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 215       ;
-;     -- 7 input functions                    ; 4         ;
-;     -- 6 input functions                    ; 50        ;
-;     -- 5 input functions                    ; 29        ;
-;     -- 4 input functions                    ; 19        ;
-;     -- <=3 input functions                  ; 113       ;
+; Combinational ALUT usage for logic          ; 214       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 58        ;
+;     -- 5 input functions                    ; 20        ;
+;     -- 4 input functions                    ; 22        ;
+;     -- <=3 input functions                  ; 114       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 74        ;
+; Dedicated logic registers                   ; 71        ;
 ;                                             ;           ;
 ; I/O pins                                    ; 36        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 74        ;
-; Total fan-out                               ; 1068      ;
-; Average fan-out                             ; 2.96      ;
+; Maximum fan-out                             ; 71        ;
+; Total fan-out                               ; 1022      ;
+; Average fan-out                             ; 2.86      ;
 +---------------------------------------------+-----------+
 
 
@@ -215,36 +216,45 @@ refer to the applicable agreement for further details.
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Entity Name           ; Library Name ;
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+-----------------------+--------------+
-; |vhdl_servo_controller                ; 215 (36)            ; 74 (4)                    ; 0                 ; 0          ; 36   ; 0            ; |vhdl_servo_controller                                  ; vhdl_servo_controller ; work         ;
-;    |angle_counter:angle_proc|         ; 134 (134)           ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |vhdl_servo_controller|angle_counter:angle_proc         ; angle_counter         ; work         ;
+; |vhdl_servo_controller                ; 214 (32)            ; 71 (3)                    ; 0                 ; 0          ; 36   ; 0            ; |vhdl_servo_controller                                  ; vhdl_servo_controller ; work         ;
+;    |angle_counter:angle_proc|         ; 136 (136)           ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |vhdl_servo_controller|angle_counter:angle_proc         ; angle_counter         ; work         ;
 ;    |generic_counter:counter|          ; 41 (41)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |vhdl_servo_controller|generic_counter:counter          ; generic_counter       ; work         ;
-;    |state_machine_core:state_machine| ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |vhdl_servo_controller|state_machine_core:state_machine ; state_machine_core    ; work         ;
+;    |state_machine_core:state_machine| ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |vhdl_servo_controller|state_machine_core:state_machine ; state_machine_core    ; work         ;
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; angle_max_reg_s[8]                     ; Stuck at GND due to stuck port data_in ;
-; angle_max_reg_s[7]                     ; Stuck at VCC due to stuck port data_in ;
-; angle_max_reg_s[6]                     ; Stuck at GND due to stuck port data_in ;
-; angle_max_reg_s[5]                     ; Stuck at VCC due to stuck port data_in ;
-; angle_max_reg_s[0..4]                  ; Stuck at GND due to stuck port data_in ;
-; angle_max_reg_s[9,10]                  ; Stuck at VCC due to stuck port data_in ;
-; angle_max_reg_s[11..14]                ; Stuck at GND due to stuck port data_in ;
-; angle_max_reg_s[15,16]                 ; Stuck at VCC due to stuck port data_in ;
-; angle_max_reg_s[17..31]                ; Stuck at GND due to stuck port data_in ;
-; angle_min_reg_s[1..3,5,7,10,11,16..31] ; Merged with angle_min_reg_s[0]         ;
-; angle_min_reg_s[4,6,15]                ; Merged with angle_min_reg_s[14]        ;
-; angle_min_reg_s[13]                    ; Merged with angle_min_reg_s[12]        ;
-; angle_min_reg_s[9]                     ; Merged with angle_min_reg_s[8]         ;
-; angle_min_reg_s[0]                     ; Stuck at GND due to stuck port data_in ;
-; angle_min_reg_s[14]                    ; Stuck at VCC due to stuck port data_in ;
-; Total Number of Removed Registers = 62 ;                                        ;
-+----------------------------------------+----------------------------------------+
++-------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                        ;
++-----------------------------------------+-------------------------------------------------+
+; Register name                           ; Reason for Removal                              ;
++-----------------------------------------+-------------------------------------------------+
+; angle_max_reg_s[8]                      ; Stuck at GND due to stuck port data_in          ;
+; angle_max_reg_s[7]                      ; Stuck at VCC due to stuck port data_in          ;
+; angle_max_reg_s[6]                      ; Stuck at GND due to stuck port data_in          ;
+; angle_max_reg_s[5]                      ; Stuck at VCC due to stuck port data_in          ;
+; angle_max_reg_s[0..4]                   ; Stuck at GND due to stuck port data_in          ;
+; angle_max_reg_s[9,10]                   ; Stuck at VCC due to stuck port data_in          ;
+; angle_max_reg_s[11..14]                 ; Stuck at GND due to stuck port data_in          ;
+; angle_max_reg_s[15,16]                  ; Stuck at VCC due to stuck port data_in          ;
+; angle_max_reg_s[17..31]                 ; Stuck at GND due to stuck port data_in          ;
+; angle_counter:angle_proc|angle_s[1]     ; Merged with angle_counter:angle_proc|angle_s[0] ;
+; angle_min_reg_s[1..3,5,7,10..13,16..31] ; Merged with angle_min_reg_s[0]                  ;
+; angle_min_reg_s[4,6,8,9,15]             ; Merged with angle_min_reg_s[14]                 ;
+; angle_min_reg_s[0]                      ; Stuck at GND due to stuck port data_in          ;
+; angle_counter:angle_proc|angle_s[0]     ; Stuck at GND due to stuck port data_in          ;
+; Total Number of Removed Registers = 65  ;                                                 ;
++-----------------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                             ;
++--------------------+---------------------------+----------------------------------------+
+; Register name      ; Reason for Removal        ; Registers Removed due to This Register ;
++--------------------+---------------------------+----------------------------------------+
+; angle_max_reg_s[8] ; Stuck at GND              ; angle_counter:angle_proc|angle_s[0]    ;
+;                    ; due to stuck port data_in ;                                        ;
++--------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -252,12 +262,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 74    ;
-; Number of registers using Synchronous Clear  ; 33    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 36    ;
+; Total registers                              ; 71    ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 34    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Clock Enable       ; 4     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -267,12 +277,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------+---------+
 ; Inverted Register                                ; Fan out ;
 +--------------------------------------------------+---------+
-; angle_counter:angle_proc|angle_s[4]              ; 7       ;
-; angle_counter:angle_proc|angle_s[6]              ; 6       ;
-; angle_counter:angle_proc|angle_s[14]             ; 6       ;
-; angle_counter:angle_proc|angle_s[15]             ; 5       ;
-; state_machine_core:state_machine|state_pres_s[3] ; 53      ;
-; Total number of inverted registers = 5           ;         ;
+; state_machine_core:state_machine|state_pres_s[3] ; 39      ;
+; Total number of inverted registers = 1           ;         ;
 +--------------------------------------------------+---------+
 
 
@@ -282,9 +288,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 ; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |vhdl_servo_controller|generic_counter:counter|cntr[23]     ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |vhdl_servo_controller|angle_min_reg_s[14]                  ;
-; 19:1               ; 24 bits   ; 288 LEs       ; 96 LEs               ; 192 LEs                ; Yes        ; |vhdl_servo_controller|angle_counter:angle_proc|angle_s[22] ;
-; 15:1               ; 8 bits    ; 80 LEs        ; 24 LEs               ; 56 LEs                 ; Yes        ; |vhdl_servo_controller|angle_counter:angle_proc|angle_s[15] ;
+; 20:1               ; 24 bits   ; 312 LEs       ; 96 LEs               ; 216 LEs                ; Yes        ; |vhdl_servo_controller|angle_counter:angle_proc|angle_s[23] ;
+; 16:1               ; 6 bits    ; 60 LEs        ; 18 LEs               ; 42 LEs                 ; Yes        ; |vhdl_servo_controller|angle_counter:angle_proc|angle_s[15] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 
 
@@ -313,27 +318,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 74                          ;
-;     CLR               ; 4                           ;
-;     ENA CLR           ; 32                          ;
-;     SCLR              ; 33                          ;
-;     plain             ; 5                           ;
-; arriav_lcell_comb     ; 215                         ;
-;     arith             ; 96                          ;
-;         1 data inputs ; 95                          ;
-;         2 data inputs ; 1                           ;
-;     extend            ; 4                           ;
-;         7 data inputs ; 4                           ;
-;     normal            ; 115                         ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 19                          ;
-;         5 data inputs ; 29                          ;
-;         6 data inputs ; 50                          ;
+; arriav_ff             ; 71                          ;
+;     CLR               ; 30                          ;
+;     ENA CLR           ; 4                           ;
+;     SCLR              ; 32                          ;
+;     SLD               ; 1                           ;
+;     plain             ; 4                           ;
+; arriav_lcell_comb     ; 214                         ;
+;     arith             ; 92                          ;
+;         1 data inputs ; 92                          ;
+;     normal            ; 122                         ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 22                          ;
+;         5 data inputs ; 20                          ;
+;         6 data inputs ; 58                          ;
 ; boundary_port         ; 36                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.30                        ;
-; Average LUT depth     ; 4.08                        ;
+; Max LUT depth         ; 5.70                        ;
+; Average LUT depth     ; 4.40                        ;
 +-----------------------+-----------------------------+
 
 
@@ -342,7 +345,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -352,7 +355,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue Feb 25 16:07:54 2025
+    Info: Processing started: Mon Mar 03 12:38:56 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vhdl_servo_controller -c vhdl_servo_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -378,13 +381,13 @@ Info (12128): Elaborating entity "angle_counter" for hierarchy "angle_counter:an
 Info (12128): Elaborating entity "generic_counter" for hierarchy "generic_counter:counter" File: S:/CPET561/CPET_561/DE1_SoC_Lab4/Custom_IP_Component/src/vhdl_servo_controller.vhd Line: 134
 Info (12128): Elaborating entity "state_machine_core" for hierarchy "state_machine_core:state_machine" File: S:/CPET561/CPET_561/DE1_SoC_Lab4/Custom_IP_Component/src/vhdl_servo_controller.vhd Line: 146
 Warning (10492): VHDL Process Statement warning at state_machine_core.vhd(37): signal "state_pres_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: S:/CPET561/CPET_561/DE1_SoC_Lab4/Custom_IP_Component/src/state_machine_core.vhd Line: 37
-Info (13000): Registers with preset signals will power-up high File: S:/CPET561/CPET_561/DE1_SoC_Lab4/Custom_IP_Component/src/angle_counter.vhd Line: 33
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "angle_counter:angle_proc|angle_s[13]" is converted into an equivalent circuit using register "angle_counter:angle_proc|angle_s[13]~_emulated" and latch "angle_counter:angle_proc|angle_s[13]~1" File: S:/CPET561/CPET_561/DE1_SoC_Lab4/Custom_IP_Component/src/angle_counter.vhd Line: 33
-    Warning (13310): Register "angle_counter:angle_proc|angle_s[12]" is converted into an equivalent circuit using register "angle_counter:angle_proc|angle_s[12]~_emulated" and latch "angle_counter:angle_proc|angle_s[13]~1" File: S:/CPET561/CPET_561/DE1_SoC_Lab4/Custom_IP_Component/src/angle_counter.vhd Line: 33
-    Warning (13310): Register "angle_counter:angle_proc|angle_s[9]" is converted into an equivalent circuit using register "angle_counter:angle_proc|angle_s[9]~_emulated" and latch "angle_counter:angle_proc|angle_s[9]~7" File: S:/CPET561/CPET_561/DE1_SoC_Lab4/Custom_IP_Component/src/angle_counter.vhd Line: 33
-    Warning (13310): Register "angle_counter:angle_proc|angle_s[8]" is converted into an equivalent circuit using register "angle_counter:angle_proc|angle_s[8]~_emulated" and latch "angle_counter:angle_proc|angle_s[9]~7" File: S:/CPET561/CPET_561/DE1_SoC_Lab4/Custom_IP_Component/src/angle_counter.vhd Line: 33
+    Warning (13310): Register "angle_counter:angle_proc|angle_s[15]" is converted into an equivalent circuit using register "angle_counter:angle_proc|angle_s[15]~_emulated" and latch "angle_counter:angle_proc|angle_s[15]~1" File: S:/CPET561/CPET_561/DE1_SoC_Lab4/Custom_IP_Component/src/angle_counter.vhd Line: 33
+    Warning (13310): Register "angle_counter:angle_proc|angle_s[14]" is converted into an equivalent circuit using register "angle_counter:angle_proc|angle_s[14]~_emulated" and latch "angle_counter:angle_proc|angle_s[15]~1" File: S:/CPET561/CPET_561/DE1_SoC_Lab4/Custom_IP_Component/src/angle_counter.vhd Line: 33
+    Warning (13310): Register "angle_counter:angle_proc|angle_s[9]" is converted into an equivalent circuit using register "angle_counter:angle_proc|angle_s[9]~_emulated" and latch "angle_counter:angle_proc|angle_s[15]~1" File: S:/CPET561/CPET_561/DE1_SoC_Lab4/Custom_IP_Component/src/angle_counter.vhd Line: 33
+    Warning (13310): Register "angle_counter:angle_proc|angle_s[8]" is converted into an equivalent circuit using register "angle_counter:angle_proc|angle_s[8]~_emulated" and latch "angle_counter:angle_proc|angle_s[15]~1" File: S:/CPET561/CPET_561/DE1_SoC_Lab4/Custom_IP_Component/src/angle_counter.vhd Line: 33
+    Warning (13310): Register "angle_counter:angle_proc|angle_s[6]" is converted into an equivalent circuit using register "angle_counter:angle_proc|angle_s[6]~_emulated" and latch "angle_counter:angle_proc|angle_s[15]~1" File: S:/CPET561/CPET_561/DE1_SoC_Lab4/Custom_IP_Component/src/angle_counter.vhd Line: 33
+    Warning (13310): Register "angle_counter:angle_proc|angle_s[4]" is converted into an equivalent circuit using register "angle_counter:angle_proc|angle_s[4]~_emulated" and latch "angle_counter:angle_proc|angle_s[15]~1" File: S:/CPET561/CPET_561/DE1_SoC_Lab4/Custom_IP_Component/src/angle_counter.vhd Line: 33
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -421,14 +424,14 @@ Warning (21074): Design contains 32 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "write_data_i[29]" File: S:/CPET561/CPET_561/DE1_SoC_Lab4/Custom_IP_Component/src/vhdl_servo_controller.vhd Line: 20
     Warning (15610): No output dependent on input pin "write_data_i[30]" File: S:/CPET561/CPET_561/DE1_SoC_Lab4/Custom_IP_Component/src/vhdl_servo_controller.vhd Line: 20
     Warning (15610): No output dependent on input pin "write_data_i[31]" File: S:/CPET561/CPET_561/DE1_SoC_Lab4/Custom_IP_Component/src/vhdl_servo_controller.vhd Line: 20
-Info (21057): Implemented 251 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 250 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 34 input pins
     Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 215 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 45 warnings
-    Info: Peak virtual memory: 4908 megabytes
-    Info: Processing ended: Tue Feb 25 16:08:05 2025
-    Info: Elapsed time: 00:00:11
+    Info (21061): Implemented 214 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 47 warnings
+    Info: Peak virtual memory: 4909 megabytes
+    Info: Processing ended: Mon Mar 03 12:39:06 2025
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:06
 
 

@@ -39,7 +39,7 @@ begin
                      angle_matched_flag_s <= '1';
                      angle_s <= angle_max_i;
                   elsif period_flag_i = '1' then
-                     angle_s <= angle_s + x"00000001";
+                     angle_s <= angle_s + x"000001F4";
                   else
                      angle_s <= angle_s;
                   end if;
@@ -48,7 +48,7 @@ begin
                      angle_matched_flag_s <= '1';
                      angle_s <= angle_min_i;
                   elsif period_flag_i = '1' then
-                     angle_s <= angle_s - x"00000001";
+                     angle_s <= angle_s - x"000001F4";
                   else
                      angle_s <= angle_s;
                   end if;
