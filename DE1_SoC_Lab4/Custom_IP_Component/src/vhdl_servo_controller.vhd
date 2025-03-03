@@ -103,7 +103,7 @@ begin
                if (write_en_i = '1') then
                   case addr_i is
                      when '0' =>
-                        angle_min_reg_s <= x"0000C350"; --write_data_i;
+                        angle_min_reg_s <= write_data_i;
                      when '1' => 
                         angle_max_reg_s <= write_data_i;
                      when others =>

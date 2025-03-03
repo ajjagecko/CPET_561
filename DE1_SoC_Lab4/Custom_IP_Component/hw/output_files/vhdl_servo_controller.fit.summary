@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Mar 03 12:39:47 2025
+Fitter Status : Successful - Mon Mar 03 12:44:29 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : vhdl_servo_controller
 Top-level Entity Name : vhdl_servo_controller
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 134 / 32,070 ( < 1 % )
-Total registers : 73
+Logic utilization (in ALMs) : 206 / 32,070 ( < 1 % )
+Total registers : 107
 Total pins : 36 / 457 ( 8 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
