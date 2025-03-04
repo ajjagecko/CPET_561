@@ -7,8 +7,7 @@
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library/Interface Protocols,Library/Interface Protocols/Serial,Library/Processors and Peripherals/Embedded Processors,Library/Processors and Peripherals/Peripherals,Library,Project/ESDI_IP,Project,Library/Processors and Peripherals" />
+ <library expandedCategories="Project/ESDI_IP,Library,Project" />
  <window width="1936" height="1048" x="-8" y="-8" />
  <generation synthesis="VHDL" />
 </preferences>

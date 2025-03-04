@@ -20,7 +20,7 @@ entity vhdl_servo_controller is
 	  write_data_i  :in  std_logic_vector(31 downto 0);
 	  write_en_i    :in  std_logic;
 	  pwm_o         :out std_logic;
-	  irq_o         :out std_logic
+	  irq         :out std_logic
 	);
 end entity vhdl_servo_controller;
 
@@ -173,7 +173,7 @@ begin
          end if;
       end process;
       
-      irq_o <= irq_s;
+      irq <= irq_s;
 	  
    compare_process: process(clk, angle_s, period_count_s)
       begin
