@@ -130,10 +130,10 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AA21      :        :                   :      
 GND                          : AA22      : gnd    :                   :         :           :                
 VCCPGM                       : AA23      : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
 HEX4[0]                      : AA24      : output : 2.5 V             :         : 5A        : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA25      :        :                   :         : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA26      :        :                   :         : 5B        :                
+HEX5[6]                      : AA25      : output : 2.5 V             :         : 5A        : Y              
+HEX5[5]                      : AA26      : output : 2.5 V             :         : 5B        : Y              
 VCCIO5B                      : AA27      : power  :                   : 2.5V    : 5B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA28      :        :                   :         : 5B        :                
+HEX5[1]                      : AA28      : output : 2.5 V             :         : 5B        : Y              
 VREFB5BN0                    : AA29      : power  :                   :         : 5B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA30      :        :                   :         : 5B        :                
 GND                          : AB1       : gnd    :                   :         :           :                
@@ -157,13 +157,13 @@ VCCPD3B4A                    : AB18      : power  :                   : 2.5V    
 GND                          : AB19      : gnd    :                   :         :           :                
 VCCPD3B4A                    : AB20      : power  :                   : 2.5V    : 3B, 4A    :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB21      :        :                   :         : 4A        :                
-HEX3[6]                      : AB22      : output : 2.5 V             :         : 5A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB22      :        :                   :         : 5A        :                
 HEX2[0]                      : AB23      : output : 2.5 V             :         : 5A        : Y              
 VCCIO5A                      : AB24      : power  :                   : 2.5V    : 5A        :                
-HEX3[5]                      : AB25      : output : 2.5 V             :         : 5A        : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB26      :        :                   :         : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB27      :        :                   :         : 5B        :                
-HEX3[4]                      : AB28      : output : 2.5 V             :         : 5B        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB25      :        :                   :         : 5A        :                
+HEX5[4]                      : AB26      : output : 2.5 V             :         : 5A        : Y              
+HEX5[3]                      : AB27      : output : 2.5 V             :         : 5B        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB28      :        :                   :         : 5B        :                
 GND                          : AB29      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB30      :        :                   :         : 5B        :                
 GND                          : AC1       : gnd    :                   :         :           :                
@@ -190,9 +190,9 @@ VCCIO4A                      : AC21      : power  :                   : 2.5V    
 pwm_o                        : AC22      : output : 2.5 V             :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC23      :        :                   :         : 4A        :                
 VREFB5AN0                    : AC24      : power  :                   :         : 5A        :                
-HEX3[3]                      : AC25      : output : 2.5 V             :         : 5A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC25      :        :                   :         : 5A        :                
 GND                          : AC26      : gnd    :                   :         :           :                
-HEX3[1]                      : AC27      : output : 2.5 V             :         : 5A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC27      :        :                   :         : 5A        :                
 HEX2[3]                      : AC28      : output : 2.5 V             :         : 5B        : Y              
 HEX2[5]                      : AC29      : output : 2.5 V             :         : 5B        : Y              
 HEX2[6]                      : AC30      : output : 2.5 V             :         : 5B        : Y              
@@ -220,8 +220,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AD21      :        :                   :      
 VCC_AUX                      : AD22      : power  :                   : 2.5V    :           :                
 GND                          : AD23      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD24      :        :                   :         : 4A        :                
-HEX3[2]                      : AD25      : output : 2.5 V             :         : 5A        : Y              
-HEX3[0]                      : AD26      : output : 2.5 V             :         : 5A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD25      :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD26      :        :                   :         : 5A        :                
 HEX1[6]                      : AD27      : output : 2.5 V             :         : 5A        : Y              
 VCCIO5A                      : AD28      : power  :                   : 2.5V    : 5A        :                
 HEX2[2]                      : AD29      : output : 2.5 V             :         : 5B        : Y              
@@ -908,7 +908,7 @@ GND                          : V21       : gnd    :                   :         
 VCCPD5A                      : V22       : power  :                   : 2.5V    : 5A        :                
 HEX4[5]                      : V23       : output : 2.5 V             :         : 5A        : Y              
 VCCPD5A                      : V24       : power  :                   : 2.5V    : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V25       :        :                   :         : 5B        :                
+HEX5[0]                      : V25       : output : 2.5 V             :         : 5B        : Y              
 VCCIO6B_HPS                  : V26       : power  :                   : 2.5V    : 6B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V27       :        :                   :         : 6B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V28       :        :                   :         : 6B        :                
@@ -970,7 +970,7 @@ HEX4[1]                      : Y23       : output : 2.5 V             :         
 HEX4[2]                      : Y24       : output : 2.5 V             :         : 5A        : Y              
 GND                          : Y25       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y26       :        :                   :         : 5B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y27       :        :                   :         : 5B        :                
+HEX5[2]                      : Y27       : output : 2.5 V             :         : 5B        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y28       :        :                   :         : 6B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y29       :        :                   :         : 6B        :                
 GND                          : Y30       : gnd    :                   :         :           :                

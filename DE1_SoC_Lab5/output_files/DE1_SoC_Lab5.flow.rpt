@@ -1,5 +1,5 @@
 Flow report for DE1_SoC_Lab5
-Tue Mar 04 14:37:25 2025
+Mon Mar 17 12:44:36 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Tue Mar 04 14:37:13 2025           ;
+; Flow Status                     ; Successful - Mon Mar 17 12:44:25 2025           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; DE1_SoC_Lab5                                    ;
 ; Top-level Entity Name           ; DE1_SoC_Lab5                                    ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 952 / 32,070 ( 3 % )                            ;
-; Total registers                 ; 1260                                            ;
+; Logic utilization (in ALMs)     ; 950 / 32,070 ( 3 % )                            ;
+; Total registers                 ; 1283                                            ;
 ; Total pins                      ; 51 / 457 ( 11 % )                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 273,408 / 4,065,280 ( 7 % )                     ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/04/2025 14:34:35 ;
+; Start date & time ; 03/17/2025 12:41:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE1_SoC_Lab5        ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                         ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 194042950431224.174111687409012                               ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 194042950431224.174222971214152                               ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                            ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                             ; --            ; --          ; --         ;
 ; MISC_FILE                           ; nios_system/synthesis/../nios_system.cmp                      ; --            ; --          ; --         ;
@@ -102,11 +102,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:58     ; 1.0                     ; 5051 MB             ; 00:00:20                           ;
-; Fitter               ; 00:01:25     ; 1.1                     ; 7295 MB             ; 00:01:35                           ;
-; Assembler            ; 00:00:08     ; 1.0                     ; 4876 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:10     ; 1.7                     ; 5290 MB             ; 00:00:09                           ;
-; Total                ; 00:02:41     ; --                      ; --                  ; 00:02:10                           ;
+; Analysis & Synthesis ; 00:00:56     ; 1.0                     ; 5051 MB             ; 00:00:19                           ;
+; Fitter               ; 00:01:13     ; 1.1                     ; 7331 MB             ; 00:01:26                           ;
+; Assembler            ; 00:00:09     ; 1.0                     ; 4875 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:10     ; 1.7                     ; 5292 MB             ; 00:00:09                           ;
+; Total                ; 00:02:28     ; --                      ; --                  ; 00:01:59                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

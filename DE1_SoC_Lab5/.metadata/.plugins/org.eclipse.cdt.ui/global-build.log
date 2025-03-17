@@ -1,36 +1,18 @@
-10:08:31 **** Clean-only build of configuration Nios II for project nios_software_bsp ****
-make clean 
-[BSP clean complete]
-10:08:35 **** Clean-only build of configuration Nios II for project nios_software ****
-make clean 
-[nios_software clean complete]
-10:24:40 **** Clean-only build of configuration Nios II for project nios_software_bsp ****
-make clean 
-[BSP clean complete]
-10:24:43 **** Clean-only build of configuration Nios II for project nios_software ****
-make clean 
-[nios_software clean complete]
-10:32:50 **** Clean-only build of configuration Nios II for project nios_software_bsp ****
-make clean 
-[BSP clean complete]
-10:32:53 **** Clean-only build of configuration Nios II for project nios_software ****
-make clean 
-[nios_software clean complete]
-10:45:11 **** Clean-only build of configuration Nios II for project nios_software_bsp ****
-make clean 
-[BSP clean complete]
-10:45:14 **** Clean-only build of configuration Nios II for project nios_software ****
-make clean 
-[nios_software clean complete]
-14:25:24 **** Clean-only build of configuration Nios II for project nios_software_bsp ****
-make clean 
-[BSP clean complete]
-14:25:27 **** Clean-only build of configuration Nios II for project nios_software ****
-make clean 
-[nios_software clean complete]
-14:39:07 **** Clean-only build of configuration Nios II for project nios_software_bsp ****
-make clean 
-[BSP clean complete]
-14:39:10 **** Clean-only build of configuration Nios II for project nios_software ****
-make clean 
-[nios_software clean complete]
+13:52:07 **** Incremental Build of configuration Nios II for project nios_software ****
+make all 
+Info: Building ../nios_software_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_software_bsp/
+[BSP build complete]
+[nios_software build complete]
+13:52:14 **** Build of configuration Nios II for project nios_software ****
+make all 
+Info: Building ../nios_software_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_software_bsp/
+[BSP build complete]
+[nios_software build complete]
+13:52:15 **** Incremental Build of configuration Nios II for project nios_software ****
+make all 
+Info: Building ../nios_software_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_software_bsp/
+[BSP build complete]
+[nios_software build complete]
