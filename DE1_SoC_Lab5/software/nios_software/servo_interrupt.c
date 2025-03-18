@@ -20,8 +20,8 @@ unsigned char *hex4Base_ptr                = (unsigned char *) HEX4_BASE;
 unsigned char min_angle_deg = 45;
 unsigned char max_angle_deg = 135;
 
-unsigned long min_angle_cnt = 0x0000C350;
-unsigned long max_angle_cnt = 0x000186A0;
+static unsigned int min_angle_cnt = 0x0000C350;
+static unsigned int max_angle_cnt = 0x000186A0;
 
 //static unsigned char servo_flag = 0;
 static unsigned char push3_flag = 0;
@@ -92,10 +92,6 @@ int main(void)
    alt_ic_isr_register(VHDL_SERVO_CONTROLLER_0_IRQ_INTERRUPT_CONTROLLER_ID, VHDL_SERVO_CONTROLLER_0_IRQ, servo_isr, 0, 0);
 
 
-   
-   *(servoControllerBase_ptr) = 0x000124F8; //1 + 0000C350 + 0
-   *(servoControllerBase_ptr + 1) = 0x000124F8; //1 + 000186A0 + 1
-   
    while(1) {
    	   
    	  //Update Hex Values
@@ -103,7 +99,7 @@ int main(void)
 	  if(1 == push3_flag) {
 		  min_angle_deg = *(switchesBase_ptr);
 		  if (min_angle_deg >= 0x2D) {
-		     min_angle_cnt = 0xC350 + ((((min_angle_deg - 0x2D))/0x1F4)*0x1F4);
+		     min_angle_cnt = 0xC350 + ((((min_angle_deg - 0x2D)*0x22B)/0x1F4)*0x1F4);
 		  }
 		  else {
 			 min_angle_deg = 0x2D;
@@ -124,7 +120,7 @@ int main(void)
 	  if(1 == push2_flag) {
 		  max_angle_deg = *(switchesBase_ptr);
 		  if (max_angle_deg <= 0x87) {
-		     max_angle_cnt = 0x186A0 - ((((0x87 - max_angle_deg))/0x1F4)*0x1F4);
+		     max_angle_cnt = 0x186A0 - ((((0x87 - max_angle_deg)*0x22B)/0x1F4)*0x1F4);
 		  }
 		  else {
 			 max_angle_deg = 0x87;
