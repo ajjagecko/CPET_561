@@ -23,9 +23,10 @@ unsigned char max_angle_deg = 135;
 unsigned long min_angle_cnt = 0x0000C350;
 unsigned long max_angle_cnt = 0x000186A0;
 
-static unsigned char servo_flag = 0;
+//static unsigned char servo_flag = 0;
 static unsigned char push3_flag = 0;
 static unsigned char push2_flag = 0;
+static unsigned char state_flag = 1;
 
 void push_isr(void *context)
 /*****************************************************************************/
@@ -57,8 +58,16 @@ void servo_isr(void *context)
 /*****************************************************************************/
 {
 	//clear interrupt
+	*(servoControllerBase_ptr + 12) = 0x0;
 	
-	servo_flag = 1;
+	if (0 == state_flag) { //Write to Min Angle
+		*(servoControllerBase_ptr) = min_angle_cnt;
+		state_flag = 1;
+	}
+	else {                 //Write to Max Angle
+		*(servoControllerBase_ptr + 1) = max_angle_cnt;
+		state_flag = 0;
+	}
 	
 	return;
 }
@@ -76,9 +85,11 @@ int main(void)
 
 
    //Servo Controller ISR set up
-   //*(servoControllerBase_ptr + 8) = 0x1;
-   //*(servoControllerBase_ptr + 12) = 0x0;
-   //alt_ic_isr_register(VHDL_SERVO_CONTROLLER_0_IRQ_INTERRUPT_CONTROLLER_ID, VHDL_SERVO_CONTROLLER_0_IRQ, servo_isr, 0, 0);
+   //*(servoControllerBase_ptr + 4) = 0x1;
+   //*(servoControllerBase_ptr + 6) = 0x0;
+   IOWR_ALTERA_AVALON_PIO_IRQ_MASK(servoControllerBase_ptr, 0x2);
+   IOWR_ALTERA_AVALON_PIO_EDGE_CAP(servoControllerBase_ptr, 0x0);
+   alt_ic_isr_register(VHDL_SERVO_CONTROLLER_0_IRQ_INTERRUPT_CONTROLLER_ID, VHDL_SERVO_CONTROLLER_0_IRQ, servo_isr, 0, 0);
 
 
    
@@ -123,6 +134,9 @@ int main(void)
 		  //Write to ServoController
 		  
 		  hex_cntr = max_angle_deg / 0x64;
+		  if(hex_cntr > 0) {
+			  max_angle_deg = max_angle_deg - 0x64;
+		  }
 		  *hex2Base_ptr = hex_values[hex_cntr];
 		  
 		  hex_cntr = max_angle_deg / 0xA;
@@ -133,6 +147,18 @@ int main(void)
 		  
 		  push2_flag = 0;
 	  }
+
+//	  if(1 == servo_flag) {
+//		  if (0 == state_flag) { //Write to Min Angle
+//			  *(servoControllerBase_ptr) = min_angle_cnt;
+//			  state_flag = 1;
+//		  }
+//		  else {                 //Write to Max Angle
+//			  *(servoControllerBase_ptr + 1) = max_angle_cnt;
+//			  state_flag = 0;
+//		  }
+//		  servo_flag = 0;
+//	  }
    }
    return 0;
 }
