@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="143" />
+   <irq preferredWidth="34" />
+   <baseaddress preferredWidth="428" />
+   <inputclock preferredWidth="61" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Project,Library/Processors and Peripherals/Embedded Processors,Library/Basic Functions,Project/ESDI,Library/Processors and Peripherals,Library/Processors and Peripherals/Peripherals,Library/Interface Protocols,Library,Library/Interface Protocols/Serial" />
+ <window width="1936" height="1048" x="-8" y="-8" />
+ <generation synthesis="VHDL" />
+</preferences>

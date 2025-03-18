@@ -1,0 +1,53 @@
+
+#include <stdio.h>
+#include "system.h"
+
+// point to base addresses 
+volatile unsigned char *pushButtonBase_ptr = (unsigned char *) PUSHBUTTON1_BASE;
+volatile unsigned char *ledsBase_ptr       = (unsigned char *) LEDS_BASE;
+volatile unsigned char *ramBase_ptr        = (unsigned char *) INFERRED_RAM_BASE;
+
+int byte_ram_test(unsigned char start_addr, unsigned char num_bytes, unsigned char write_data) {
+   *ledsBase_ptr = 0x00;
+   for(char i = 0; i < num_bytes; i++) {
+      *(ramBase_ptr + start_addr + i) = write_data;
+   }
+   for(char i = 0; i < num_bytes; i++) {
+      if(write_data != *(ramBase_ptr + start_addr + i)) {
+         *ledsBase_ptr = 0xFF;
+      }
+   }
+   return(0);
+}
+
+int short_ram_test(unsigned short start_addr, unsigned short num_bytes, unsigned short write_data) {
+   *ledsBase_ptr = 0x00;
+   for(short i = 0; i < num_bytes; i++) {
+      *(ramBase_ptr + start_addr + i) = write_data;
+   }
+   for(short i = 0; i < num_bytes; i++) {
+      if(write_data != *(ramBase_ptr + start_addr + i)) {
+         *ledsBase_ptr = 0xFF;
+      }
+   }
+   return(0);
+}
+
+int int_ram_test(unsigned int start_addr, unsigned int num_bytes, unsigned int write_data) {
+   *ledsBase_ptr = 0x00;
+   for(int i = 0; i < num_bytes; i ++) {
+      *(ramBase_ptr + start_addr + i*4) = write_data;
+   }
+   for(int i = 0; i < num_bytes; i++) {
+      if(write_data != *(ramBase_ptr + start_addr + i*4)) {
+         *ledsBase_ptr = 0xFF;
+      }
+   }
+   return(0);
+}
+
+int main(void) {
+	int_ram_test(0x3F00, 0x100, 0x1);
+	//int_ram_test(0x5000, 0x12345678, 0x12345678);
+	return(0);
+}
