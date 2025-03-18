@@ -37,7 +37,7 @@ void push_isr(void *context)
 {
 	*(pushButtonBase_ptr + 12) = 0x0;
 	//Mask logic for setting flags
-	if (0 != (*(pushButtonBase_ptr) & 0x8) )
+	if (0 == (*(pushButtonBase_ptr) & 0x8) )
 		push3_flag = 1;
 	else //if (0 != (pushButtonBase_ptr & 0x4) )
 		push2_flag = 1;
@@ -73,10 +73,14 @@ int main(void)
    *(pushButtonBase_ptr + 12) = 0x0;
    alt_ic_isr_register(PUSHBUTTON_IRQ_INTERRUPT_CONTROLLER_ID, PUSHBUTTON_IRQ, push_isr, 0, 0);
    
+
+
    //Servo Controller ISR set up
-   *(servoControllerBase_ptr + 8) = 0x2;
-   *(servoControllerBase_ptr + 12) = 0x0;  
-   alt_ic_isr_register(VHDL_SERVO_CONTROLLER_0_IRQ_INTERRUPT_CONTROLLER_ID, VHDL_SERVO_CONTROLLER_0_IRQ, servo_isr, 0, 0);
+   //*(servoControllerBase_ptr + 8) = 0x1;
+   //*(servoControllerBase_ptr + 12) = 0x0;
+   //alt_ic_isr_register(VHDL_SERVO_CONTROLLER_0_IRQ_INTERRUPT_CONTROLLER_ID, VHDL_SERVO_CONTROLLER_0_IRQ, servo_isr, 0, 0);
+
+
    
    *(servoControllerBase_ptr) = 0x000124F8; //1 + 0000C350 + 0
    *(servoControllerBase_ptr + 1) = 0x000124F8; //1 + 000186A0 + 1
@@ -98,10 +102,10 @@ int main(void)
 		  //Write to ServoController
 		  
 		  hex_cntr = min_angle_deg / 0xA;
-		  hex4Base_ptr = hex_values[hex_cntr];
+		  *hex4Base_ptr = hex_values[hex_cntr];
 		  
 		  hex_cntr = min_angle_deg % 0xA;
-		  hex3Base_ptr = hex_values[hex_cntr];
+		  *hex3Base_ptr = hex_values[hex_cntr];
 		  
 		  push3_flag = 0;
 	  }
@@ -119,13 +123,13 @@ int main(void)
 		  //Write to ServoController
 		  
 		  hex_cntr = max_angle_deg / 0x64;
-		  hex2Base_ptr = hex_values[hex_cntr];
+		  *hex2Base_ptr = hex_values[hex_cntr];
 		  
 		  hex_cntr = max_angle_deg / 0xA;
-		  hex1Base_ptr = hex_values[hex_cntr];
+		  *hex1Base_ptr = hex_values[hex_cntr];
 		  
 		  hex_cntr = max_angle_deg % 0xA;
-		  hex0Base_ptr = hex_values[hex_cntr];
+		  *hex0Base_ptr = hex_values[hex_cntr];
 		  
 		  push2_flag = 0;
 	  }
