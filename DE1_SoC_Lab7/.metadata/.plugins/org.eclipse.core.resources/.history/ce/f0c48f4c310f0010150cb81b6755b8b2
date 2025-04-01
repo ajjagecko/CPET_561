@@ -1,0 +1,89 @@
+#include <stdio.h>
+#include "system.h"
+
+// point to base addresses 
+volatile unsigned char *pushButtonBase_ptr = (unsigned char *) PUSHBUTTON1_BASE;
+volatile unsigned char *ledsBase_ptr       = (unsigned char *) LEDS_BASE;
+volatile unsigned char *ramBase_char_ptr   = (unsigned char *) RAMINFR_BE_0_BASE;
+volatile unsigned short *ramBase_short_ptr = (unsigned short *) RAMINFR_BE_0_BASE;
+volatile unsigned int *ramBase_int_ptr     = (unsigned int *) RAMINFR_BE_0_BASE;
+
+int byte_ram_test(unsigned char addr, unsigned char write_data) {
+   *ledsBase_ptr = 0x00;
+   *(ramBase_char_ptr + addr) = write_data;
+   
+   if(write_data != *(ramBase_char_ptr + addr)) {
+      *ledsBase_ptr = 0xFF;
+      printf("ERROR: Address: 0x%x Read: 0x%x Expected: 0x%x", (ramBase_char_ptr + addr), *(ramBase_char_ptr + addr), write_data);
+   }
+   return(0);
+}
+
+int short_ram_test(unsigned short addr, unsigned short write_data) {
+   *ledsBase_ptr = 0x00;
+   *(ramBase_short_ptr + addr) = write_data;
+   
+   if(write_data != *(ramBase_short_ptr + addr)) {
+      *ledsBase_ptr = 0xFF;
+      printf("ERROR: Address: 0x%x Read: 0x%x Expected: 0x%x", (ramBase_short_ptr + addr), *(ramBase_short_ptr + addr), write_data);
+   }
+   return(0);
+}
+
+int int_ram_test(unsigned int addr, unsigned int write_data) {
+   *ledsBase_ptr = 0x00;
+   *(ramBase_int_ptr + addr) = write_data;
+   
+   if(write_data != *(ramBase_int_ptr + addr)) {
+      *ledsBase_ptr = 0xFF;
+      printf("ERROR: Address: 0x%x Read: 0x%x Expected: 0x%x", (ramBase_int_ptr + addr), *(ramBase_int_ptr + addr), write_data);
+   }
+   return(0);
+}
+
+int ram_test(unsigned char address, unsigned int testData, unsigned char ramSize) {
+unsigned char testDataChar;
+unsigned short testDataShort;
+   switch (ramSize) {
+      case 8:
+
+    	 testDataChar = (unsigned char)testData;
+
+         for(unsigned char i = 0; i < address; i ++) {
+            byte_ram_test(i, testDataChar);
+         }
+      break;
+      
+      case 16:
+     	 addrShort = (unsigned short)address;
+		 testDataShort = (unsigned short)testData;
+         for(unsigned short i = 0; i < address; i ++) {
+            byte_ram_test(i, testDataShort);
+         }
+      break;
+      
+      case 32:
+    	 addrInt = (unsigned int)address;
+         for(unsigned int i = 0; i < address; i ++) {
+            byte_ram_test(i, testData);
+         }
+      break;
+      
+      default:
+         printf("ERROR: Invalid ramSize");
+      break;
+      
+   }
+   return(0);
+}
+
+int main(void) {
+
+    ram_test(0x3FFF,0x00,8);
+
+    ram_test(0x3FFF,0x1234,16);
+
+    ram_test(0x3FFF,0xABCDEF90,32);
+	//int_ram_test(0x5000, 0x12345678, 0x12345678);
+	return(0);
+}
