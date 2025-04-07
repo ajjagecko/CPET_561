@@ -218,7 +218,7 @@ module nios_system_mm_interconnect_0_router
     end
 
     // ( 0x9000 .. 0x9010 )
-    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 16'h9000  && read_transaction  ) begin
+    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 16'h9000   ) begin
             src_channel = 7'b1000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end

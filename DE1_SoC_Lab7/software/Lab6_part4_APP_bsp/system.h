@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'nios_system'
  * SOPC Builder design path: ../../nios_system.sopcinfo
  *
- * Generated: Tue Apr 01 14:33:56 EDT 2025
+ * Generated: Mon Apr 07 12:49:50 EDT 2025
  */
 
 /*
@@ -195,7 +195,7 @@
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
 #define JTAG_UART_0_BASE 0x9028
-#define JTAG_UART_0_IRQ 0
+#define JTAG_UART_0_IRQ 1
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
 #define JTAG_UART_0_READ_DEPTH 64
@@ -280,9 +280,9 @@
 #define PUSHBUTTON1_HAS_IN 1
 #define PUSHBUTTON1_HAS_OUT 0
 #define PUSHBUTTON1_HAS_TRI 0
-#define PUSHBUTTON1_IRQ -1
-#define PUSHBUTTON1_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define PUSHBUTTON1_IRQ_TYPE "NONE"
+#define PUSHBUTTON1_IRQ 0
+#define PUSHBUTTON1_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define PUSHBUTTON1_IRQ_TYPE "LEVEL"
 #define PUSHBUTTON1_NAME "/dev/pushbutton1"
 #define PUSHBUTTON1_RESET_VALUE 0
 #define PUSHBUTTON1_SPAN 16
@@ -315,7 +315,7 @@
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1743531991
+#define SYSID_QSYS_0_TIMESTAMP 1744044320
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

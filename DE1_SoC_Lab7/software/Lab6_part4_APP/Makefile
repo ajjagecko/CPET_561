@@ -142,7 +142,7 @@ ACDS_VERSION := 18.1
 ELF := Lab6_part4_APP.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS := Lab6_Part4.c
+C_SRCS := Lab6_Part4_interrupts.c
 CXX_SRCS :=
 ASM_SRCS :=
 
