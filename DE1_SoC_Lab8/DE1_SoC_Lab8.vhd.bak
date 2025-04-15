@@ -1,0 +1,9 @@
+entity DE1_SoC_Lab8 is
+   port(
+      clk       :in std_logic;
+      reset_n   :in std_logic;
+      data_i    :in std_logic_vector(15 downto 0);
+      filter_en :in std_logic;
+      data_o    :out std_logic_vector(15 downto 0)
+   );
+end low_pass_filter;

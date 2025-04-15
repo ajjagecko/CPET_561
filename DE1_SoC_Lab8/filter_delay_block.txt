@@ -1,0 +1,9 @@
+-- Lab 8 delay_block
+-- Andrew Akre
+
+entity filter_delay_generic is
+   port(
+      clk           :in std_logic;
+      reset         :in std_logic;
+      data_i        :in std_logic_vector(15 dowtno 0);
+      
