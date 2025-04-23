@@ -1,0 +1,9 @@
+15:50:50 **** Incremental Build of configuration Nios II for project Audio_App ****
+make all 
+Info: Building S:/CPET561/CPET_561/DE1_SoC_Lab9/software/Audio_App_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C S:/CPET561/CPET_561/DE1_SoC_Lab9/software/Audio_App_bsp/
+[BSP build complete]
+[Audio_App build complete]
+
+15:50:51 Build Finished (took 1s.300ms)
+
